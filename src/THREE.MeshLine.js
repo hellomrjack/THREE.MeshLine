@@ -5,7 +5,7 @@
 
   var has_require = typeof require !== 'undefined'
 
-  var THREE = root.THREE || (has_require && require('three'))
+  var THREE = global.THREE
   if (!THREE) throw new Error('MeshLine requires three.js')
 
   class MeshLine extends THREE.BufferGeometry {
